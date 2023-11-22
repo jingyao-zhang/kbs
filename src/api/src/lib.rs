@@ -22,6 +22,7 @@ use anyhow::{anyhow, bail, Context, Result};
 #[cfg(feature = "as")]
 use attestation::AttestationService;
 use jwt_simple::prelude::Ed25519PublicKey;
+use log::info;
 #[cfg(feature = "resource")]
 use resource::RepositoryConfig;
 use semver::{BuildMetadata, Prerelease, Version, VersionReq};

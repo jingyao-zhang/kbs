@@ -12,6 +12,8 @@ use base64::Engine;
 use log::{error, info};
 use serde_json::json;
 
+use kbs_types::CombinedAttestation;
+
 /// POST /auth
 pub(crate) async fn auth(
     request: web::Json<Request>,
@@ -37,7 +39,7 @@ pub(crate) async fn auth(
 
 /// POST /attest
 pub(crate) async fn attest(
-    attestation: web::Json<Attestation>,
+    attestation: web::Json<CombinedAttestation>,
     request: HttpRequest,
     map: web::Data<SessionMap<'_>>,
     attestation_service: web::Data<AttestationService>,

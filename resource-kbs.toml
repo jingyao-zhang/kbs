@@ -1,0 +1,5 @@
+# resource-kbs --socket 127.0.0.1:50002 --insecure-http --auth-public-key config/public.pub
+# sudo resource-kbs --config-file resource-kbs.toml
+sockets = ["127.0.0.1:50002"]
+insecure_http = true
+auth_public_key = "./config/public.pub"

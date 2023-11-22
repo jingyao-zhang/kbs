@@ -1,0 +1,7 @@
+# issuer-kbs --socket 127.0.0.1:50001 --insecure-http --auth-public-key config/public.pub
+# sudo RUST_LOG=debug issuer-kbs --config-file issue-kbs.toml
+# sudo RUST_LOG=debug RUST_BACKTRACE=full kbs-client --url http://127.0.0.1:50001 attest --tee-key-file test/tee_key.pem > test/attestation_token
+# sudo RUST_LOG=debug AA_SAMPLE_ATTESTER_TEST=1 RUST_BACKTRACE=full kbs-client --url http://127.0.0.1:50001 attest --tee-key-file test/tee_key.pem > test/attestation_token
+sockets = ["127.0.0.1:50001"]
+insecure_http = true
+auth_public_key = "./config/public.pub"
